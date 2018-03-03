@@ -1,0 +1,105 @@
+<!--
+Шаблон печати "Личных дел" сотрудников
+Разработка: Штрейс Никита
+            vk.com/shtreisn
+            shtreis.ru
+-->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Шаблон файла личного дела</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button class="button button--print" type="button" onclick="callPrint()">Печать</button>
+<!--СТРАНИЦА-->
+<section class="page">
+    <header class="page__header">
+        <div class="page__title-wrapper">
+            <p class="page__volume">
+                Том №
+                <span class="page__volume-number">21001</span>
+            </p>
+            <h1 class="page__title">
+                <span class="page__title-name">ДЕЛО</span>
+                <!--НОМЕР РАБОТНИКА-->
+                <span class="page__title-number">005</span>
+            </h1>
+        </div>
+        <figure class="page__person">
+            <!--ФОТО РАБОТНИКА-->
+            <img class="page__person-image" src="http://placehold.it/261x350">
+        </figure>
+    </header>
+    <main class="page__content list">
+        <!--СПИСОК ВОПРОСОВ-->
+        <ul class="list__items">
+            <!--ВОПРОС-->
+            <li class="list__item">
+                <!--ТЕКСТ ВОПРОСА-->
+                <h2 class="list__title">Имя:</h2>
+                <!--ТЕКСТ ОТВЕТА НА ВОПРОС-->
+                <p class="list__content">Иван Иванов</p>
+            </li>
+            <li class="list__item">
+                <h2 class="list__title">Должность:</h2>
+                <p class="list__content">Инструктор по обучению</p>
+            </li>
+            <!--<li class="list__item">-->
+            <!--<h2 class="list__title">Родной город:</h2>-->
+            <!--<p class="list__content">г.Молодечно (Беларусь)</p>-->
+            <!--</li>-->
+        </ul>
+        <ul class="list__items">
+            <li class="list__item">
+                <h2 class="list__title">Направление учёбы:</h2>
+                <p class="list__content">Учитель младших классов / преподаватель истории</p>
+            </li>
+            <!--<li class="list__item">-->
+            <!--<h2 class="list__title">Будущая профессия:</h2>-->
+            <!--<p class="list__content">химик-технолог</p>-->
+            <!--</li>-->
+            <li class="list__item">
+                <h2 class="list__title">Увлечения:</h2>
+                <p class="list__content">Очень любит историю, интересуется иностранными языками, поэтому хотел бы
+                    связать будущее с профессией гид/экскурсовод</p>
+            </li>
+            <li class="list__item">
+                <h2 class="list__title">Почему Макдоналдс?:</h2>
+                <p class="list__content">Устроился в Макдоналдс вместе с сестрой, чтобы обеспечивать себя и платить за
+                    учёбу.</p>
+            </li>
+            <!--<li class="list__item">-->
+            <!--<h2 class="list__title">Первые впечатления о работе:</h2>-->
+            <!--<p class="list__content">Нравится добрый коллектив, весело работать. </p>-->
+            <!--</li>-->
+        </ul>
+        <ul class="list__items">
+            <li class="list__item">
+                <h2 class="list__title">Особенности: </h2>
+                <p class="list__content">Имеет брата-близнеца</p>
+            </li>
+        </ul>
+    </main>
+    <footer class="page__footer">
+        <!--ШТАМП Переключается перемещением класса stamp--active -->
+        <strong class="stamp stamp--new_crew">Новичок</strong>
+        <strong class="stamp stamp--best_crew_month">Лучший работник месяца</strong>
+        <strong class="stamp stamp--best_new_crew">Лучший новичок</strong>
+        <strong class="stamp stamp--new_crew_custom stamp--active">"Новичок" со стажем</strong>
+        <!--Информация о дате начала работы-->
+        <p class="page__begin-date">
+            <span class="page__begin-date-title">Начало работы:</span>
+            <span class="page__begin-date-info">5 лет назад</span>
+        </p>
+    </footer>
+</section>
+<script>
+    function callPrint() {
+        window.print();
+    }
+</script>
+</body>
+</html>

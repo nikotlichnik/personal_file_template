@@ -1,0 +1,311 @@
+@import "print.css" print;
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@font-face {
+    font-family: 'SAO UI TT';
+    src: url('fonts/SAOUITT-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'B52';
+    src: url('fonts/B52.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 210mm;
+    height: 297mm;
+
+    color: #2e2015;
+
+    background-image: url("img/paper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+}
+
+.page__header {
+    display: flex;
+    justify-content: space-between;
+
+    width: 724px;
+    padding-top: 35px;
+}
+
+.page__volume {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 60px;
+
+    color: #2e2015;
+    font-family: "B52", serif;
+    font-weight: normal;
+    font-size: 78px;
+    letter-spacing: -4px;
+    text-shadow: 0px 0px 20px #ba9757;
+}
+
+.page__volume-number {
+    display: inline-block;
+
+    line-height: 78px;
+}
+
+.page__volume-number::after {
+    content: '';
+
+    display: block;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 2px;
+    background-color: #2e2015;
+
+    opacity: 0.6;
+}
+
+.page__title {
+    padding: 0;
+    padding-left: 27px;
+    margin: 0;
+
+    color: #2e2015;
+    font-family: "SAO UI TT", sans-serif;
+    font-weight: bold;
+    font-size: 103px;
+    letter-spacing: 2px;
+
+    position: relative;
+    text-shadow: 0px 0px 20px #ba9757;
+}
+
+.page__title-name {
+    display: inline-block;
+    margin-right: 48px;
+}
+
+.page__title-name::after {
+    content: '';
+    display: inline-block;
+    width: 49px;
+    height: 73px;
+
+    position: absolute;
+    top: 33px;
+
+    background-image: url("img/number-symbol2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    filter: drop-shadow(0px 0px 3px #ba9757);
+}
+
+.page__title-number {
+    font-family: "B52", serif;
+    font-size: 94px;
+    font-weight: normal;
+    letter-spacing: -4px;
+    line-height: 78px;
+
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 4px;
+}
+
+.page__title-number::after {
+    content: '';
+
+    display: block;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 2px;
+    background-color: #2e2015;
+
+    opacity: 0.6;
+}
+
+.page__person {
+    width: 261px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.page__content {
+    width: 724px;
+}
+
+.list__items {
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 0;
+
+    list-style: none;
+
+    color: #2e2015;
+    font-family: "B52", serif;
+    font-weight: normal;
+}
+
+.list__items:last-of-type {
+    margin-bottom: 0;
+}
+
+.list__item {
+    margin-bottom: 0;
+
+    line-height: 31px;
+
+    background-image: url("img/text-line4.png");
+    background-repeat: repeat-y;
+}
+
+.list__title {
+    display: inline;
+    margin: 0;
+    padding: 0;
+
+    color: #be2825;
+
+    font-size: 30px;
+    letter-spacing: -2px;
+    line-height: 31px;
+}
+
+.list__content {
+    display: inline;
+    margin: 0;
+    padding: 0;
+
+    font-size: 30px;
+    letter-spacing: -2px;
+}
+
+.page__footer {
+    width: 724px;
+
+    margin-top: auto;
+
+    position: relative;
+}
+
+.stamp {
+    display: none;
+
+    position: absolute;
+
+    color: rgba(235, 13, 10, 0.58);
+    font-family: "B52", serif;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 80px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -4px;
+
+    border: 3px solid rgba(235, 13, 10, 0.58);
+    border-radius: 5px;
+
+    transform: rotate(-22deg);
+}
+
+.stamp--active {
+    display: block;
+}
+
+.stamp--new_crew {
+    width: 350px;
+
+    bottom: 74px;
+    left: 0;
+}
+
+.stamp--best_crew_month {
+    width: 350px;
+
+    bottom: 30px;
+    left: -50px;
+
+    color: rgba(84, 11, 89, 0.5);
+
+    border-color: rgba(84, 11, 89, 0.5);
+}
+
+.stamp--best_new_crew {
+    width: 350px;
+
+    bottom: 36px;
+    left: -72px;
+
+    color: rgba(30, 97, 3, 0.58);
+
+    border-color: rgba(30, 97, 3, 0.58);
+}
+
+.stamp--new_crew_custom {
+    width: 445px;
+
+    bottom: 36px;
+    left: -72px;
+
+    color: rgba(30, 97, 3, 0.58);
+
+    border-color: rgba(30, 97, 3, 0.58);
+}
+
+.page__begin-date {
+    position: absolute;
+    top: -70px;
+    left: 200px;
+
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+    font-family: "B52", serif;
+    font-size: 36px;
+    font-weight: normal;
+
+    letter-spacing: -2px;
+}
+
+.page__begin-date::after {
+    content: '';
+
+    display: block;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 2px;
+    background-color: #2e2015;
+
+    opacity: 0.6;
+}
+
+.page__begin-date-title {
+    color: #be2825;
+}
+
+.page__begin-date-info {
+    line-height: 31px;
+}
